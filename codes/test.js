@@ -127,3 +127,36 @@ const myFunc=function(){
 
 console.log(typeof myFunc); //object function
 
+//STACK MEMORY-primitive type
+//HEAP MEMORY-non primitive type
+
+//------------------------------
+
+let myName="Anu";
+let anotherName=myName;
+anotherName="Divu";
+
+console.log(anotherName);
+
+//------------STRING------------------
+
+const name1="Anusha";
+const age1=19;
+
+console.log(name1+age1+"Value");
+console.log(`Hello my name is ${name1} and my age is ${age1}`);//string
+
+const gameName=new String('anusha-jain');// object 0:"a", 1:"n" etc
+
+console.log(gameName[0]);
+console.log(gameName.__proto__);
+
+console.log(gameName.length);
+console.log(gameName.toUpperCase);
+console.log(gameName.charAt(2));
+console.log(gameName.indexOf('h'));
+
+const newString=gameName.substring(0,4);//anus
+
+const anotherString=gameName.slice(-8,4);// can take negative in slice also
+const newString1="      anusha       "

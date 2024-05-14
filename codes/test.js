@@ -88,3 +88,42 @@ console.log(gameCounter);
 
 //----------------------------------------------------------------------------------------------------------------
 
+console.log("2">1);//true
+console.log(null>0);//false
+console.log(null=0);//false
+console.log(null>=0);//true
+
+console.log("2"==1);//true
+console.log("2"===1);//false-strict 
+
+//----------------------------------------------------------------------------------------------------------------
+//DATA TYPES
+
+//primitive-7- string,number,boolean,null,undefined,symbol,BigInt
+
+const scores=100;
+const temp=null;
+let userEmail;//undefined
+
+const id=Symbol('123');
+const anotherId=Symbol('123');
+//both will be dif
+
+const bignumber=52959597831099357907013n;
+
+//reference-NON Primitive
+//array,objects,functions
+
+const heroes=["shaktiman","naagraj","doga"];
+
+let myObj={
+    name:"Anusha",
+    age:19,
+}
+
+const myFunc=function(){
+    console.log("Hello World");
+}
+
+console.log(typeof myFunc); //object function
+

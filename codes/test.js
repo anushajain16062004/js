@@ -160,3 +160,10 @@ const newString=gameName.substring(0,4);//anus
 
 const anotherString=gameName.slice(-8,4);// can take negative in slice also
 const newString1="      anusha       "
+console.log(newString1.trim());// anusha with no spaces
+// MDN mein aur methods hai for strings
+
+//-------------NUMBERS-----------------
+const score1=400
+const balance=new Number(100);
+console.log(balance);

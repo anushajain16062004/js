@@ -196,3 +196,37 @@ console.log(Math.floor(Math.random()*(max-min+1)) +min);
 
 
 //-------------DATES----------------
+
+let myDate=new Date();
+console.log(myDate.toString());
+console.log(myDate.toLocaleString());
+
+console.log(typeof myDate);// date is object
+
+
+let myCreatedDate=new Date(2023,0,23);//month start from 0
+console.log(myCreatedDate.toLocaleString());
+
+let myCreatedDate1=new Date("2023-01-14");// here start from 1
+let myCreatedDate2=new Date("01-14-2023");//mm-dd-yy
+
+let myTimeStamp=Date.now();
+
+console.log(Math.floor(Date.now()/1000));// in seconds
+
+let newDate=new Date();
+console.log(newDate.getMonth()+1);
+console.log(newDate.getDay());
+
+
+newDate.toLocaleString('default',{
+
+    weekday:"long",
+
+})
+
+
+//-----------------------------------------------------------------------------------------
+//-------------ARRAYS----------------
+
+

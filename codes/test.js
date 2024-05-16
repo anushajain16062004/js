@@ -229,4 +229,55 @@ newDate.toLocaleString('default',{
 //-----------------------------------------------------------------------------------------
 //-------------ARRAYS----------------
 
+const myArr=[0,1,2,3,4];
+//resizable + mix of datatypes+ 0 indexed
+console.log(myArr[2]);
+
+myArr.push(5);
+console.log(myArr);
+
+myArr.pop();//removes last value of array
+
+myArr.unshift(9);// adds 9 at start of myArr
+myArr.shift();// removes 1st element of array
+
+console.log(myArr.includes(0))// true/false
+console.log(myArr.indexOf(0));
+
+const newArr=myArr.join();// becomes string
+
+//slice,splice
+
+console.log("A",myArr);
+const myn1=myArr.slice(1,3)// 1to 2.. does not remove
+console.log(myn1);
+
+const myn2=myArr.splice(1,3);//1 to 3.. removed from original array
+
+const marvelHeroes=["thor","ironman"];
+const dc=["superman","flash"];
+
+marvelHeroes.push(dc);// dc as elemement jayga marvelHeroes mein,, dikkat
+
+marvelHeroes.concat(dc);//same..dikkat
+
+const allHeros=marvelHeroes.concat(dc);
+console.log(allHeros);
+
+const all_new_heroes=[...marvelHeroes,...dc];
+
+const another_array=[1,2,3,[4,5,6],7,[6,7,[4,5]]];
+const real_another_arr=another_arr.flat(Infinity);
+
+
+console.log(Array.isArray("Anusha"));
+
+let a=100;
+let b=200;
+let c=300;
+
+console.log(Array.of(a,b,c));
+
+//-------------OBJECTSS----------------
+
 

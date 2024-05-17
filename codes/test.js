@@ -278,6 +278,110 @@ let c=300;
 
 console.log(Array.of(a,b,c));
 
-//-------------OBJECTSS----------------
+//-------------OBJECTS----------------
+
+//singleton from constructor
 
 
+//object literals
+const mySym=Symbol("key1");
+
+const JsUser={
+    name:"Anusha",
+    age:19,
+    [mySym]:"mykey1",//symbol in square bracket
+    location:"Delhi",
+    email:"anushajain1606@gmail.com",
+    isLoggedIn:false
+};
+
+console.log(JsUser.email);
+console.log(JsUser["email"]);
+
+JsUser.email="divu@gmail.com";
+// Object.freeze(JsUser);
+
+
+JsUser.greeting=function(){
+    console.log("Hello Anusha");
+}
+
+console.log(JsUser.greeting());
+
+JsUser.greeting2=function(){
+    console.log(`Hello ${this.name}`);
+}
+
+console.log(JsUser.greeting2());
+
+//-------------OBJECTS--2----------------
+
+const tinderUser=new Object();//singleton
+// const tinderUser1={};//non singleton
+
+tinderUser.id="123"
+tinderUser.name="anusha"
+tinderUser.isloggedin=false;
+
+const regularUser={
+    email:"anu@gmail.com",
+    fullname:{
+        userfullname:{
+            firstname:"anusha",
+            lastname:"jain"
+        }
+    }
+}
+
+console.log(regularUser.fullname.userfullname.firstname)
+
+const obj1={1:"a",2:"b"}
+const obj2={3:"c",4:"d"}
+const obj3=Object.assign({},obj1,obj2)// merges two
+
+const obj4={...obj1,...obj2}// spread, easy for merging
+
+const users={
+    id:1,
+    email:"a@gmai.com"
+}
+
+users[1].email;
+
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+
+
+//-------------OBJECTS--3----------------
+
+const course={
+    coursename:"anusha",
+    price:"999",
+    instructuor:"divu"
+}
+
+const{coursename}=course
+console.log(coursename);
+
+
+const navbar=({company})=>{
+
+}
+
+navbar(company="anusha")
+
+//-------------API's----------------
+
+// {
+//     name:"anusha",
+//     "coursename":"js",
+
+// }// in JSON keys and values both are in strings
+
+[
+    {},
+    {}
+]
+
+//randomuserme api

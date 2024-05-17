@@ -385,3 +385,182 @@ navbar(company="anusha")
 ]
 
 //randomuserme api
+
+//-------------FUNCTIONS--------------------
+
+function sayMyName(){
+    console.log("A");
+    console.log("N");
+}
+
+sayMyName();
+
+function add2nos(a,b){//parameter
+    console.log(a+b);
+}
+
+const result=add2nos(3,5);//arguments
+add2nos(3,null);//3
+
+console.log("Result:",result);
+
+function loginUser(username="divu"){
+    if(!username){//==usernaem==undefined
+        console.log("Please enter username:");
+        return;
+
+    }
+    return `${username} just logged in`
+}
+
+console.log(loginUser("anusha"));
+
+//-------------FUNCTIONS-parameter-----------------------
+
+function calculateCardPrice(...num1){//rest operator/spread operator
+    return num1;
+}
+
+console.log(calculateCardPrice(200,400,300,500));//return array
+
+const user={
+    username:"anusha",
+    price:1000
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+handleObject(user);
+handleObject({
+    username:"divu",
+    price:1030
+})
+
+
+
+//-------------SCOPES----------------------
+
+let x=10;// global scope
+//const 
+//var
+
+//{}//scope
+
+if(true){// inside-block scope
+    let y=10;
+    const z=20;
+    var t=90;
+}
+
+console.log(t);// will print,, y and z wont print as inside {}, but t will print
+//avoid var
+
+function one(){
+    const username="anusha"
+
+    function two(){
+        const website="yt"
+        console.log(username)
+    }
+
+    console.log(website);//error+ so nect lines does nt execute as line by line execution
+
+    two();
+}
+
+one();
+
+///intersting////////////////
+
+function addone(num){
+    return num+1;
+}
+
+addone(5);
+
+const addtwo=function(num){
+    return num+2;
+}
+
+addtwo(5);
+
+
+//arrow functions////////
+
+const user2={
+    username:"anusha",
+    price:999,
+
+    welcomemsg:function(){
+        console.log(`${this.username},welcome to website`)
+    }
+}
+
+user2.welcomemsg();
+user2.username="divu";
+user2.welcomemsg();
+
+console.log(this);//{}
+
+function chai(){
+    console.log(this);
+}
+chai();//many values comes from 'this'
+
+//this used in obj not in functions
+
+const chai1=()=>{
+    let username="anu"
+    console.log(this.username)
+}
+
+const add2=(nums1,num2)=>{
+    return nums1+num2;
+}
+// curly braces we use return statement 
+
+console.log(add2(3,4));
+
+//const add2=(num1,num2)=>(num1+num2)  // one line
+
+const myArray=[2,4,5,7,8];
+//myArray.forEach()
+
+
+
+//-------------IMMEDIATELY INVOKED FUNCTION EXPRESSIONS(IIFE)--------------------
+
+(function divu(){
+    console.log(`DB connected`)
+})()
+
+// to remove pollution of global scope we use iife
+
+(()=>{
+    console.log(`DB`)
+})();//semicolon needed
+
+
+//-------------HOW CODE EXECUTED----------------------
+
+// Javascript execution context.
+
+//global exec context(this)->window object..single threaded..
+//Function exec context
+//Eval exec context
+
+// 2phases-- memory creation phase
+// - execution phase
+
+//1)GEC->this
+//2)Mem creation phase- all variable put together( all variables given undefined, in function, defn of function goes)
+//3)Exec phase- val1->10 goes etc...function makes its own exec context(new environemnt+new thread-----> has memeory phase and exec phase)
+//after done, it deletes itself
+
+//CALL STACK- gec+ function keep going and popping when done//lifo
+
+
+
+//-------------CONTROL FLOW----------------------

@@ -564,3 +564,126 @@ const myArray=[2,4,5,7,8];
 
 
 //-------------CONTROL FLOW----------------------
+//false values- false,0,-0,BigInt 0n,"",null,undefined,NaN
+
+//true values- "0",'false'," ",[],{},function(){}
+//false==0-- true
+
+//-------------nullish coalescing operator(??):null,undefined---------------------
+
+let val1;
+val1=5??10;//5
+val1=null??10;//10
+
+//Ternary operstor
+//condition?true:false;
+
+
+
+//-------------CONTROL FLOW----------------------
+
+//for of
+
+const arr=[1,2,3,4,5];
+
+for(const num of arr){
+    console.log(num);
+}
+
+//MAPS
+
+const map=new Map()
+map.set('IN',"India");
+//key value pairs.. only have unique values
+//like object
+
+const myObject={
+    'game1':'NFS',
+    'game2':'PUBG'
+}
+
+//OBJECT--------------------------------------------------
+
+const programming=["js","ruby","py"];
+
+for(const key in programming){
+    console.log(programming[key]);
+}
+//for in loop gives keys, for of loop gives values directly
+
+
+const coding=["js","ruby","java","py","cpp"];
+
+coding.forEach(function(item){
+    console.log(item);
+})
+
+coding.forEach((item)=>{
+    console.log(item)
+})
+
+coding.forEach((item,index,arr)=>{
+    console.log(item,index,arr)
+})
+
+const myCoding=[
+    {
+        langName:"java",
+        langfile:"js"
+    },
+
+    {
+        langName:"java1",
+        langfile:"js1"
+    },
+
+    {
+        langName:"java2",
+        langfile:"js2"
+    }
+
+]
+
+myCoding.forEach((item)=>{
+    console.log(item.langName);
+})
+
+const a1=coding.forEach((item)=>{
+    console.log(item);
+    return item;
+})
+
+
+//----------------------------------
+
+const mynums = [1,2,3,4,5,6,7,7,8,9];
+const newnums= mynums.filter((num)=>{
+    return num>4
+});
+
+console.log(newnums);
+
+const a2 = userbooks.filter((items)=>{
+        return items.age>70;
+    })
+
+
+//--------------------------------------------------------
+const mynums1=[1,2,3,4,5,6]
+
+const abfc= mynums1.map((num)=>{
+    return num+10;
+})
+
+console.log(abfc);
+
+//-----------------------Reduce --------------------------------------
+
+const mynums5 = [1,2,3];
+
+const mytotal = mynums5.reduce(function(acc,curval){
+    console.log(`acc : ${acc} curval : ${curval}`);
+    return acc + curval;
+},0)      // 0 is start of acculumalator value.
+
+console.log(mytotal); 

@@ -4,12 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM LEARNING</title>
+    <style>
+        .bg-black{
+            background-color: blueviolet;
+            color: black;
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: rgb(17, 16, 17); color: aliceblue;">
     
-    <div class="bg-black">
-        <h1 class="heading">Dom learning</h1>
+    <!-- <div class="bg-black">
+        <h1 id="title" class="heading">Dom learning</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum accusamus eos ducimus aliquam incidunt assumenda omnis at provident maiores officia officiis labore suscipit quod, minus ad molestias unde dignissimos veritatis.</p>
     </div>
+
+    <ul>
+        <li class="listitem">1</li>
+        <li class="listitem">2</li>
+        <li class="listitem">3</li>
+        <li class="listitem">4</li>
+    </ul> -->
+
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tues</div>
+        <div class="day">Wed</div>
+        <div class="day">Thur</div>
+    </div>
 </body>
+
+<script>
+    // const parent=document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children);
+
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML)
+    // }
+
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // console.log("NODES",parent.childNodes);
+
+    const div=document.createElement('div');
+    console.log(div);
+    div.className="main"
+    div.id=Math.round(Math.random()*10+1)
+
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor="blue"
+    div.style.padding="12px"
+    // div.innerText="Anusha Jain"
+    const addtext=document.createTextNode("Anusha Jain")
+    div.appendChild(addtext);
+
+    document.body.appendChild(div)
+
+
+    function addLang(lang){
+        const li=document.createElement('li')
+        li.innerHTML=`${lang}`
+        document.querySelector('.main')
+        appendChild(li)
+    }
+
+    addLang("cpp")
+    addLang("java")
+
+    //edit
+    const secondlang=document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML="mojo"
+    const newli=document.createElement('li');
+    newli.textContent="Mojo"
+    secondlang.replaceWith(newli);
+
+    const lastlang=document.querySelector('li:firstchild')
+    lastlang.remove();
+    
+</script>
 </html>
